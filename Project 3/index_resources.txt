@@ -1,0 +1,14 @@
+audio
+	cooperativas.ogg
+form
+	formhandler.cgi
+img
+	planets.gif
+	someotherimg.jpg
+link
+	somestylefile
+script
+	js/footer.js
+	somescriptfile
+video
+	cooperativas.mp4

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>CIIC3011 &mdash; Test Page for Project 3</title>
+    <link rel="stylesheet" href="somestylefile">
+    <script src="somescriptfile"></script> <!-- Include useful functions -->
+    <style> /* Inline what could be in a .css file > */
+        a:hover { font-size: 125% } /* Cannot change href attribute in css */
+        span { text-decoration: underline }
+    </style>
+    <script> /* src="whatever" should be an attribute, not tag content */
+        function dummy_function() {
+            alert("Who are you calling a dummy!?");
+    </script>
+    <base href="somefile.html" target="_blank">
+</head>
+<body>
+    <!-- Header is the same across all pages, so it would have been better to write it only once and "import" it (like the footer). -->
+    <header>
+        <img id="imgRUM" src="http://www.example.com/someimg.jpg" alt="RUM">
+        <h1>Colegio Coop</h1>
+        <img id="imgCoop" src="someotherimg.jpg" alt="Cooperativismo">
+        <h2>Tu cooperativa, &iexcl;siempre!</h2>
+    </header>
+    <main>
+        <a id="top"></a>
+        <p><video controls loop src="cooperativas.mp4" id="videosrcmp4" title="video_to_play_a_.mp4_file"></p>
+        <p><audio autoplay controls src="cooperativas.ogg" loop id="audiosrcogg" title="audio_to_play_a_.ogg_file"></p>
+        <p><a href="https://www.coopmanati.com/cooperativismo" target="_blank">&iquest;Qu&eacute; es el cooperativismo?</a></p>
+        <p>Por favor llene la siguiente solicitud para que se una a nuestra familia y sea socio-due&ntilde;o de Colegio Coop.
+        <form novalidate action="formhandler.cgi" method="POST">
+            <p><label for="nombre">Nombre Completo:</label>&nbsp;<input id="nombre" name="nombre"></p>
+            <p><label for="ssn">Seguro Social:</label>&nbsp;<input type="password" id="ssn" name="ssn"></p>
+            <p><label for="fechanac">Fecha de Nacimiento (Opcional):</label>&nbsp;<input type="date" id="fechanac" name="fechanac"></p>
+            <!--<p id="pEdad"><label for="edad">Edad:</label>&nbsp;<input id="edad" name="edad" readonly>-->
+            <p><label>Estado Civil (opcional):</label>&nbsp;<label><input type="radio" name="estado" value="c"> Casado(a)</label>&nbsp;<label><input type="radio" name="estado" value="s"> Soltero(a)</label></p>
+            <p><label for="telcel">Tel&eacute;fono Celular:</label>&nbsp;<input type="tel" id="telcel" name="telcel" value="N/A"></p>
+            <p><label for="email">Correo electr&oacute;nico:</label>&nbsp;<input type="email" id="email" name="email"></p>
+            <input type="submit" value="Someter"> <input type="image" src="submitbutton.gif">
+        </form>
+        <span onclick="window.location='#top'">Click to go to the top &#8593;</span>
+
+        <!-- Example of area tag from w3schools.com. href="https://www.w3schools.com/tags/tag_area.asp" -->
+        <!-- MDN is better than w3schools, but oh well... -->
+        <!-- An image-map, with clickable areas: -->
+        <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+        <map name="planetmap">
+            <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+            <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+            <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+        </map>
+
+        <!-- Example of audio tag from w3schools.com. href="w3schools.com/tags/tag_source.asp" -->
+        <!-- An audio player with two source files. The browser should choose which file (if any) it has support for: -->
+        <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    </main>
+    <script src="js/footer.js"></script> <!-- Use the same footer for all documents -->
+</body>
+</html>
